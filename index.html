@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa de Oportunidades con IA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🌍 Mapa de Oportunidades con IA</h1>
+  <p>Oportunidades de negocio detectadas en ciudades de todo el mundo. Públicas para todos.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Publicar una oportunidad</h2>
+    <form id="form">
+      <input name="name" placeholder="Nombre" required maxlength="100">
+      <div class="row">
+        <input name="city" placeholder="Ciudad" required maxlength="80">
+        <input name="country" placeholder="País" required maxlength="80">
+      </div>
+      <textarea name="problem" placeholder="Problema detectado" required maxlength="600"></textarea>
+      <textarea name="ai_solution" placeholder="Solución con IA" required maxlength="600"></textarea>
+      <div class="row">
+        <select name="category" required>
+          <option value="">Categoría</option>
+          <option>Salud</option><option>Educación</option><option>Transporte</option>
+          <option>Comercio</option><option>Turismo</option><option>Finanzas</option>
+          <option>Medio ambiente</option><option>Otra</option>
+        </select>
+        <select name="potential" required>
+          <option value="">Potencial</option>
+          <option>Bajo</option><option>Medio</option><option>Alto</option>
+        </select>
+      </div>
+      <button type="submit" id="submitBtn">Publicar</button>
+      <p id="msg" class="msg"></p>
+    </form>
+  </section>
+
+  <section>
+    <div class="filters">
+      <input id="fCity" placeholder="Filtrar por ciudad">
+      <input id="fCountry" placeholder="Filtrar por país">
+      <select id="fCategory"><option value="">Todas las categorías</option></select>
+    </div>
+    <p id="count" class="count"></p>
+    <div id="list" class="grid"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
